@@ -6,15 +6,15 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 function CategoryMenu() {
-  const state = useSelector((state) => {
-    return state;
-  });
-
   const dispatch = useDispatch();
-  const { categories } = state;
-  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const state = useSelector(state => state);
 
+  const { categories } = state;
+
+  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+  
   useEffect(() => {
     if (categoryData) {
       dispatch({

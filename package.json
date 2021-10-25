@@ -1,23 +1,38 @@
 {
-  "name": "mern-shopping",
+  "name": "redux-shop",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a workup of the Redux Shop Engine.  The project plan is to follow the following criteria;",
   "main": "server/server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "npm run start:prod",
     "start:prod": "cd server && npm start",
-    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "start:dev": "npx concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "seed": "cd server && npm run seed",
+    "install": "cd server && npm i && cd ../client && npm i",
     "heroku-postbuild": "cd client && npm run build"
   },
-  "author": "",
+  "author": "Eddie Hajek",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "apollo": "^2.33.6",
     "graphql": "^15.6.1",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "reduct": "^3.3.1",
+    "stripe": "^8.184.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
-  }
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehajek/Redux-Store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ehajek/Redux-Store/issues"
+  },
+  "homepage": "https://git.heroku.com/lit-citadel-07984.git"
 }

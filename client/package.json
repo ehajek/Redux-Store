@@ -20,7 +20,9 @@
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "redux": "^4.1.1"
+    "reduct": "^3.3.1",
+    "redux": "^4.1.1",
+    "stripe": "^8.184.0"
   },
   "scripts": {
     "start": "react-scripts start",
