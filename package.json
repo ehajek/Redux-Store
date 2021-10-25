@@ -9,7 +9,7 @@
     "start:dev": "npx concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "seed": "cd server && npm run seed",
     "install": "cd server && npm i && cd ../client && npm i",
-    "heroku-postbuild": "cd client && npm run build"
+    "heroku-postbuild": "cd client && npm run build && cd ../server && npm run seed"
   },
   "author": "Eddie Hajek",
   "license": "ISC",
